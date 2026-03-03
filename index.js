@@ -8,8 +8,8 @@
 import { extension_settings, getContext, loadExtensionSettings } from "../../../extensions.js";
 import { saveSettingsDebounced, eventSource, event_types } from "../../../../script.js";
 
-const extensionName = "sillytavern-openrouter-tts";
-const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
+const extensionName = "SillyTavern-OpenRouter-TTS";
+const extensionFolderPath = import.meta.url.substring(0, import.meta.url.lastIndexOf("/"));
 
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1";
 
