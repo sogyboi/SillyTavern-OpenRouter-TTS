@@ -1,0 +1,117 @@
+<div id="openrouter-tts-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>OpenRouter TTS</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <!-- Enable Toggle -->
+            <div class="openrouter-tts-row">
+                <label class="checkbox_label" for="openrouter_tts_enabled">
+                    <input type="checkbox" id="openrouter_tts_enabled" />
+                    <span>Enable TTS</span>
+                </label>
+            </div>
+
+            <!-- Auto-speak Toggle -->
+            <div class="openrouter-tts-row">
+                <label class="checkbox_label" for="openrouter_tts_auto_speak">
+                    <input type="checkbox" id="openrouter_tts_auto_speak" />
+                    <span>Auto-speak new messages</span>
+                </label>
+            </div>
+
+            <!-- Narrate user messages too -->
+            <div class="openrouter-tts-row">
+                <label class="checkbox_label" for="openrouter_tts_narrate_user">
+                    <input type="checkbox" id="openrouter_tts_narrate_user" />
+                    <span>Also narrate user messages</span>
+                </label>
+            </div>
+
+            <hr />
+
+            <!-- API Key -->
+            <div class="openrouter-tts-row">
+                <label for="openrouter_tts_api_key">OpenRouter API Key</label>
+                <div class="openrouter-tts-api-key-wrapper">
+                    <input type="password" id="openrouter_tts_api_key" class="text_pole" placeholder="sk-or-..." />
+                    <button id="openrouter_tts_toggle_key" class="menu_button" title="Show/Hide API Key">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Connection Status -->
+            <div class="openrouter-tts-row openrouter-tts-status-row">
+                <span id="openrouter_tts_status" class="openrouter-tts-status disconnected">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="status-text">Not connected</span>
+                </span>
+            </div>
+
+            <hr />
+
+            <!-- Model Selection -->
+            <div class="openrouter-tts-row">
+                <label for="openrouter_tts_model">Model</label>
+                <select id="openrouter_tts_model" class="text_pole">
+                    <option value="openai/gpt-4o-mini-tts">GPT-4o Mini TTS (openai/gpt-4o-mini-tts)</option>
+                    <option value="openai/tts-1">TTS-1 (openai/tts-1)</option>
+                    <option value="openai/tts-1-hd">TTS-1 HD (openai/tts-1-hd)</option>
+                </select>
+            </div>
+
+            <!-- Voice Selection -->
+            <div class="openrouter-tts-row">
+                <label for="openrouter_tts_voice">Voice</label>
+                <select id="openrouter_tts_voice" class="text_pole">
+                    <option value="alloy">Alloy</option>
+                    <option value="ash">Ash</option>
+                    <option value="ballad">Ballad</option>
+                    <option value="coral" selected>Coral</option>
+                    <option value="echo">Echo</option>
+                    <option value="fable">Fable</option>
+                    <option value="nova">Nova</option>
+                    <option value="onyx">Onyx</option>
+                    <option value="sage">Sage</option>
+                    <option value="shimmer">Shimmer</option>
+                    <option value="verse">Verse</option>
+                </select>
+            </div>
+
+            <!-- Audio Format -->
+            <div class="openrouter-tts-row">
+                <label for="openrouter_tts_format">Audio Format</label>
+                <select id="openrouter_tts_format" class="text_pole">
+                    <option value="mp3" selected>MP3</option>
+                    <option value="wav">WAV</option>
+                    <option value="opus">Opus</option>
+                    <option value="aac">AAC</option>
+                    <option value="flac">FLAC</option>
+                    <option value="pcm16">PCM16</option>
+                </select>
+            </div>
+
+            <!-- Speed Slider -->
+            <div class="openrouter-tts-row">
+                <label for="openrouter_tts_speed">
+                    Speed: <span id="openrouter_tts_speed_value">1.0</span>x
+                </label>
+                <input type="range" id="openrouter_tts_speed" min="0.25" max="4.0" step="0.05" value="1.0" />
+            </div>
+
+            <hr />
+
+            <!-- Action Buttons -->
+            <div class="openrouter-tts-row openrouter-tts-buttons">
+                <button id="openrouter_tts_test" class="menu_button" title="Test current TTS settings">
+                    <i class="fa-solid fa-play"></i> Test Voice
+                </button>
+                <button id="openrouter_tts_stop" class="menu_button" title="Stop current playback">
+                    <i class="fa-solid fa-stop"></i> Stop
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

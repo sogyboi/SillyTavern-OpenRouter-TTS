@@ -1,0 +1,132 @@
+/* OpenRouter TTS Extension Styles */
+
+#openrouter-tts-settings {
+    margin-top: 10px;
+}
+
+#openrouter-tts-settings .inline-drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0;
+}
+
+.openrouter-tts-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.openrouter-tts-row label {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--SmartThemeBodyColor, #ccc);
+}
+
+.openrouter-tts-row .checkbox_label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.openrouter-tts-row .checkbox_label span {
+    font-size: 0.95em;
+}
+
+/* API Key */
+.openrouter-tts-api-key-wrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.openrouter-tts-api-key-wrapper input {
+    flex: 1;
+}
+
+.openrouter-tts-api-key-wrapper button {
+    flex-shrink: 0;
+    padding: 4px 8px;
+    min-width: 36px;
+}
+
+/* Status */
+.openrouter-tts-status-row {
+    flex-direction: row !important;
+    align-items: center;
+}
+
+.openrouter-tts-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85em;
+    padding: 4px 0;
+}
+
+.openrouter-tts-status.connected i {
+    color: #4caf50;
+}
+
+.openrouter-tts-status.disconnected i {
+    color: #f44336;
+}
+
+.openrouter-tts-status.checking i {
+    color: #ff9800;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* Speed slider */
+#openrouter_tts_speed {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Buttons */
+.openrouter-tts-buttons {
+    flex-direction: row !important;
+    gap: 8px;
+}
+
+.openrouter-tts-buttons .menu_button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+}
+
+/* HR styling */
+#openrouter-tts-settings hr {
+    border: none;
+    border-top: 1px solid var(--SmartThemeBorderColor, #444);
+    margin: 4px 0;
+}
+
+/* Speak button on messages */
+.openrouter-tts-speak-btn {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    padding: 2px;
+    font-size: 1em;
+}
+
+.openrouter-tts-speak-btn:hover {
+    opacity: 1;
+}
+
+.openrouter-tts-speak-btn.playing {
+    color: var(--SmartThemeQuoteColor, #4caf50);
+    opacity: 1;
+    animation: pulse 1s infinite;
+}
